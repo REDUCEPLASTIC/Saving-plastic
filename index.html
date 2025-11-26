@@ -13,7 +13,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">🌿 Plastic Bag Initiative</a>
+            <a href="#" class="logo">GreenBagsSG</a>
             <ul class="nav-links">
                 <li><a href="#introduction">About</a></li>
                 <li><a href="#statistics">Statistics</a></li>
@@ -50,35 +50,150 @@
     <section id="statistics" class="section">
         <h2 class="section-title">Key Facts About Plastic Waste in Singapore</h2>
         <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">📊</div>
-                <div class="stat-number" data-target="6.86">0</div>
-                <div class="stat-label">million tonnes of waste generated in 2023</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" data-target="6.86">0</div>
+                    <div class="stat-label">million tonnes of waste generated in 2023</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>Singapore produces a very large amount of waste every year because of its strong economy, high consumption, and fast daily lifestyle. This number includes all waste — food, plastic, metal, paper, and industrial waste. The high volume shows why Singapore must reduce waste if it wants to be sustainable.</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🛍️</div>
-                <div class="stat-number" data-target="957">0</div>
-                <div class="stat-label">thousand tonnes of plastic waste generated</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">🛍️</div>
+                    <div class="stat-number" data-target="957">0</div>
+                    <div class="stat-label">thousand tonnes of plastic waste generated</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>Plastic waste is one of the biggest waste streams in Singapore. This includes plastic bags, food packaging, drink bottles, takeaway containers, and other single-use items. Most of this plastic comes from households and supermarkets.</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">♻️</div>
-                <div class="stat-number" data-target="5">0</div>
-                <div class="stat-label">% of plastics were recycled (~48,000 tonnes)</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">% of plastics were recycled (~48,000 tonnes)</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>Plastic recycling is very low because many plastics cannot be recycled easily. Thin bags and food wrappers get contaminated or melted. As a result, most plastic ends up being burned at waste-to-energy plants or sent to Semakau Landfill. The low recycling rate shows that reducing usage is more important than relying on recycling.</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">📉</div>
-                <div class="stat-number" data-target="80">0</div>
-                <div class="stat-label">% drop in plastic bag usage after July 2023 charge</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">📉</div>
+                    <div class="stat-number" data-target="80">0</div>
+                    <div class="stat-label">% drop in plastic bag usage after July 2023 charge</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>When supermarkets started charging for plastic bags, many people brought their own reusable bags. This small policy proved that people change behaviour when there is an incentive or cost. It also shows that government policies can strongly influence environmental habits.</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🏠</div>
-                <div class="stat-number" data-target="11">0</div>
-                <div class="stat-label">% household recycling rate</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-number" data-target="11">0</div>
+                    <div class="stat-label">% household recycling rate</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>Even though blue recycling bins exist everywhere, many families do not recycle correctly. Items are often contaminated with food or mixed with non-recyclables. This shows the need for better education and simpler recycling rules.</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🏝️</div>
-                <div class="stat-number">⚠️</div>
-                <div class="stat-label">Semakau Landfill filling faster than expected</div>
+            <div class="stat-card expandable-card">
+                <div class="stat-card-content">
+                    <div class="stat-icon">🏝️</div>
+                    <div class="stat-number">⚠️</div>
+                    <div class="stat-label">Semakau Landfill filling faster than expected</div>
+                </div>
+                <div class="stat-card-expanded">
+                    <p>Semakau is Singapore's only landfill, and it is expected to run out of space by 2035. Because we burn most waste, the leftover ash still needs to be buried. If we continue producing waste at the same rate, Singapore will face a major waste-management crisis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Interactive Plastic Calculator -->
+    <section class="section calculator-section">
+        <h2 class="section-title">Plastic Bag Impact Calculator</h2>
+        <div class="calculator-wrapper">
+            <div class="calculator-left">
+                <div class="input-group">
+                    <label for="bags-per-week">Bags to Use per Week</label>
+                    <div class="input-container">
+                        <input type="number" id="bags-per-week" min="0" max="100" value="10" class="number-input">
+                        <span class="input-unit">bags</span>
+                    </div>
+                    <input type="range" id="bags-slider" min="0" max="100" value="10" class="range-slider">
+                    <div class="range-labels">
+                        <span>0 bags</span>
+                        <span>100 bags</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="bag-cost">Cost per Bag (SGD)</label>
+                    <div class="input-container">
+                        <input type="number" id="bag-cost" min="0" max="1" step="0.01" value="0.05" class="number-input">
+                        <span class="input-unit">SGD</span>
+                    </div>
+                    <input type="range" id="cost-slider" min="0" max="1" step="0.01" value="0.05" class="range-slider">
+                    <div class="range-labels">
+                        <span>$0.00</span>
+                        <span>$1.00</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="usage-years">Years of Usage</label>
+                    <div class="input-container">
+                        <input type="number" id="usage-years" min="1" max="50" value="5" class="number-input">
+                        <span class="input-unit">years</span>
+                    </div>
+                    <input type="range" id="years-slider" min="1" max="50" value="5" class="range-slider">
+                    <div class="range-labels">
+                        <span>1 year</span>
+                        <span>50 years</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-right">
+                <div class="total-impact-card">
+                    <h3>Total Environmental Impact</h3>
+                    <div class="impact-amount">
+                        <span class="impact-number" id="total-bags">2,600</span>
+                        <span class="impact-unit">plastic bags used</span>
+                    </div>
+                </div>
+
+                <div class="breakdown-section">
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Weekly Usage</span>
+                        <span class="breakdown-value" id="weekly-usage">10 bags</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Annual Usage</span>
+                        <span class="breakdown-value" id="annual-usage">520 bags</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-label">Total Cost</span>
+                        <span class="breakdown-value" id="total-cost">SGD 130.00</span>
+                    </div>
+                    <div class="breakdown-item decompose-item">
+                        <span class="breakdown-label">Decomposition Time*</span>
+                        <span class="breakdown-value" id="decompose-time">2.6M years</span>
+                    </div>
+                </div>
+                <p class="decompose-note">*Illustrative cumulative metric based on ~1,000 years per bag average decomposition time.</p>
+
+                <div class="action-section">
+                    <h4>Ready to Reduce Your Impact?</h4>
+                    <p>Switch to reusable bags and help protect Singapore's environment!</p>
+                    <button class="calculator-cta-btn" onclick="takePledge()">Take the Green Pledge</button>
+                </div>
             </div>
         </div>
     </section>
@@ -89,33 +204,68 @@
     <section class="section">
         <h2 class="section-title">Why Do We Use So Many Plastic Bags?</h2>
         <div class="causes-grid">
-            <div class="cause-item">
-                <div class="cause-icon">⚡</div>
-                <div class="cause-text">Convenience & fast lifestyle</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">⚡</div>
+                    <div class="cause-text">Convenience & fast lifestyle</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>People want quick and easy options. Carrying reusable bags feels "extra work," especially during busy days. So plastic bags became the default choice.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">💰</div>
-                <div class="cause-text">Free/cheap bags until 2023</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">💰</div>
+                    <div class="cause-text">Free/cheap bags until 2023</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>Plastic bags were given out freely at supermarkets for decades. When something is free, people do not think about its environmental cost. This led to a habit of overusing bags without thinking.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">🗑️</div>
-                <div class="cause-text">Reuse for bin-liners</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">🗑️</div>
+                    <div class="cause-text">Reuse for bin-liners</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>Many households use plastic bags to line rubbish bins. This makes people feel they "need" plastic bags and encourages taking more from shops.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">♻️</div>
-                <div class="cause-text">Limited recycling options for thin plastic films</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">♻️</div>
+                    <div class="cause-text">Limited recycling options for thin plastic films</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>Thin plastic bags and wrappers often cannot be recycled. They melt too easily and contaminate other recyclables. Because recycling is ineffective, people continue using bags without consequences.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">🌏</div>
-                <div class="cause-text">Cultural habits</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">🌏</div>
+                    <div class="cause-text">Cultural habits</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>In Singapore, people often double-bag groceries for safety or use many small bags instead of one large bag. These habits became normal and hard to break.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">📦</div>
-                <div class="cause-text">Retail overpackaging</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">📦</div>
+                    <div class="cause-text">Retail overpackaging</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>Supermarkets and shops sometimes wrap items too much — fruits in trays, vegetables in plastic, bakery items in multiple layers. This creates unnecessary plastic usage.</p>
+                </div>
             </div>
-            <div class="cause-item">
-                <div class="cause-icon">💡</div>
-                <div class="cause-text">Consumer awareness gaps</div>
+            <div class="cause-item expandable-card">
+                <div class="cause-item-content">
+                    <div class="cause-icon">💡</div>
+                    <div class="cause-text">Consumer awareness gaps</div>
+                </div>
+                <div class="cause-item-expanded">
+                    <p>Many people do not realise how much plastic they use every week. They also do not know the long-term environmental damage caused by plastic pollution.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -159,25 +309,55 @@
     <section class="section">
         <h2 class="section-title">What Singapore Is Already Doing</h2>
         <div class="policy-list">
-            <div class="policy-item">
-                <span class="check-icon">✔️</span>
-                <span>Disposable Carrier Bag Charge (5-cent minimum, 80% drop in usage)</span>
+            <div class="policy-item expandable-policy">
+                <div class="policy-item-header">
+                    <span class="check-icon">✔️</span>
+                    <span class="policy-title">Disposable Carrier Bag Charge (5-cent minimum, 80% drop in usage)</span>
+                </div>
+                <div class="policy-item-expanded">
+                    <p class="policy-description">Since July 2023, all major supermarkets must charge at least 5 cents per plastic bag. This small charge changed behaviour quickly — plastic bag usage dropped by around 80%. Many people now bring reusable bags, showing that policy changes can strongly influence daily habits.</p>
+                    <a href="https://www.nea.gov.sg/media/news/news/index/supermarket-carrier-bag-charge-to-commence-on-3-july-2023" target="_blank" rel="noopener noreferrer" class="policy-link">Learn more: MOE/NEA carrier bag charge policy page →</a>
+                </div>
             </div>
-            <div class="policy-item">
-                <span class="check-icon">✔️</span>
-                <span>Resource Sustainability Act</span>
+            <div class="policy-item expandable-policy">
+                <div class="policy-item-header">
+                    <span class="check-icon">✔️</span>
+                    <span class="policy-title">Resource Sustainability Act (RSA)</span>
+                </div>
+                <div class="policy-item-expanded">
+                    <p class="policy-description">The RSA is a major law that helps Singapore manage waste more sustainably. It introduces rules for companies to reduce packaging waste, improve recycling, and be more responsible for what they produce.</p>
+                    <a href="https://www.nea.gov.sg/our-services/waste-management/resource-sustainability-act" target="_blank" rel="noopener noreferrer" class="policy-link">Learn more: Resource Sustainability Act official page →</a>
+                </div>
             </div>
-            <div class="policy-item">
-                <span class="check-icon">✔️</span>
-                <span>Packaging waste reporting by companies</span>
+            <div class="policy-item expandable-policy">
+                <div class="policy-item-header">
+                    <span class="check-icon">✔️</span>
+                    <span class="policy-title">Packaging Waste Reporting by Companies</span>
+                </div>
+                <div class="policy-item-expanded">
+                    <p class="policy-description">Large companies must report how much packaging they use every year. This forces businesses to track their waste and encourages them to redesign products with less plastic. It also helps the government plan better waste-management strategies.</p>
+                    <a href="https://www.nea.gov.sg/our-services/waste-management/3r-programmes/mandatory-packaging-reporting" target="_blank" rel="noopener noreferrer" class="policy-link">Learn more: NEA Packaging Reporting Framework →</a>
+                </div>
             </div>
-            <div class="policy-item">
-                <span class="check-icon">✔️</span>
-                <span>Singapore Green Plan 2030 goals</span>
+            <div class="policy-item expandable-policy">
+                <div class="policy-item-header">
+                    <span class="check-icon">✔️</span>
+                    <span class="policy-title">Singapore Green Plan 2030 Goals</span>
+                </div>
+                <div class="policy-item-expanded">
+                    <p class="policy-description">The Green Plan sets national targets to reduce waste, increase recycling, shift to cleaner energy, and make industries more sustainable. It includes goals like cutting daily waste per person and phasing out many single-use plastics.</p>
+                    <a href="https://www.greenplan.gov.sg/" target="_blank" rel="noopener noreferrer" class="policy-link">Learn more: Singapore Green Plan 2030 official site →</a>
+                </div>
             </div>
-            <div class="policy-item">
-                <span class="check-icon">✔️</span>
-                <span>Upcoming deposit-return scheme for drink containers</span>
+            <div class="policy-item expandable-policy">
+                <div class="policy-item-header">
+                    <span class="check-icon">✔️</span>
+                    <span class="policy-title">Upcoming Deposit-Return Scheme for Drink Containers</span>
+                </div>
+                <div class="policy-item-expanded">
+                    <p class="policy-description">By 2025, Singapore will introduce a system where people pay a small deposit when buying bottled or canned drinks. They get the deposit back when they return the container for recycling. This system is used worldwide and helps increase recycling rates dramatically.</p>
+                    <a href="https://www.nea.gov.sg/media/media-releases/index/launch-of-the-beverage-container-return-scheme" target="_blank" rel="noopener noreferrer" class="policy-link">Learn more: Singapore's upcoming DRS policy →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -235,10 +415,7 @@
     <section class="section">
         <h2 class="section-title">What Students and Schools Can Do</h2>
         <div class="actions-grid">
-            <div class="action-item">
-                <div class="action-icon">🎒</div>
-                <div class="action-text">Carry foldable reusable bags in school bags</div>
-            </div>
+           
             <div class="action-item">
                 <div class="action-icon">♻️</div>
                 <div class="action-text">Reuse existing plastic bags as many times as possible</div>
@@ -287,6 +464,86 @@
 
     <div class="divider"></div>
 
+    <!-- Personal Solutions Section -->
+    <section id="personal-solutions" class="section">
+        <h2 class="section-title">Solutions You Can Take</h2>
+        <div class="personal-solutions-grid">
+            <article class="personal-card">
+                <div class="card-icon">🎒</div>
+                <h3>What You Can Do in Your School</h3>
+                <ul>
+                    <li>Launch “Bring Your Own Bag” days during recess or fairs.</li>
+                    <li>Create a reusable-bag library near the canteen for anyone who forgets.</li>
+                    <li>Track weekly plastic bag usage per class and celebrate low-waste champions.</li>
+                    <li>Include a plastic-free pledge during assemblies or student council meetings.</li>
+                </ul>
+            </article>
+            <article class="personal-card">
+                <div class="card-icon card-icon-wwf" aria-label="WWF panda logo">
+                    <svg viewBox="0 0 64 64" role="img" aria-label="WWF Panda">
+                        <circle cx="20" cy="18" r="8"></circle>
+                        <circle cx="44" cy="18" r="8"></circle>
+                        <ellipse cx="32" cy="34" rx="18" ry="22"></ellipse>
+                        <circle cx="26" cy="30" r="5" fill="#fff"></circle>
+                        <circle cx="38" cy="30" r="5" fill="#fff"></circle>
+                        <circle cx="26" cy="30" r="2.2"></circle>
+                        <circle cx="38" cy="30" r="2.2"></circle>
+                        <ellipse cx="32" cy="42" rx="6" ry="4"></ellipse>
+                    </svg>
+                </div>
+                <h3>Donate to Save Plastic with WWF</h3>
+                <p class="card-lede">Support WWF’s global plastic reduction programmes to fund research, advocacy, and better waste systems.</p>
+                <a class="card-link" href="https://www.wwf.sg/sgplastics/" target="_blank" rel="noopener noreferrer">
+                    Donate via WWF-Singapore →
+                </a>
+            </article>
+            <article class="personal-card">
+                <div class="card-icon">🏖️</div>
+                <h3>SG Beach Clean-Up Volunteering</h3>
+                <p class="card-lede">Join regular shoreline clean-ups to collect plastic waste, audit what you find, and inspire neighbours.</p>
+                <ul>
+                    <li>Sign up with local groups like SG Beach Cleanup or International Coastal Cleanup SG.</li>
+                    <li>Bring gloves, reusable sacks, and hydration.</li>
+                    <li>Share data on collected plastics to influence policy.</li>
+                </ul>
+                <a class="card-link" href="https://www.publichygienecouncil.sg/beachcleanup/" target="_blank" rel="noopener noreferrer">
+                    Volunteer for the next cleanup →
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Video Resources Section -->
+    <section class="section video-section">
+        <h2 class="section-title">Watch Other Ideas and Opinions on Plastic Pollution</h2>
+        <div class="video-grid">
+            <a class="video-card" href="https://www.youtube.com/watch?v=9GMbRG9CZJw" target="_blank" rel="noopener noreferrer">
+                <div class="video-thumb">
+                    <img src="https://img.youtube.com/vi/9GMbRG9CZJw/hqdefault.jpg" alt="How Plastic Hurts Our Planet thumbnail" loading="lazy">
+                    <span class="play-icon">▶</span>
+                </div>
+                <div class="video-content">
+                    <h3>How Plastic Hurts Our Planet</h3>
+                    <p>Short clip that breaks down the scale of plastic pollution worldwide and why immediate action matters.</p>
+                </div>
+            </a>
+            <a class="video-card" href="https://www.youtube.com/watch?v=_6xlNyWPpB8" target="_blank" rel="noopener noreferrer">
+                <div class="video-thumb">
+                    <img src="https://img.youtube.com/vi/_6xlNyWPpB8/hqdefault.jpg" alt="Students Taking the Lead thumbnail" loading="lazy">
+                    <span class="play-icon">▶</span>
+                </div>
+                <div class="video-content">
+                    <h3>Students Taking the Lead</h3>
+                    <p>Hear from other young changemakers who are reducing single-use plastics in their communities.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- CTA Section -->
     <section id="cta" class="section">
         <div class="cta-section">
@@ -298,15 +555,125 @@
             <div class="cta-buttons">
                 <button class="btn-cta" onclick="takePledge()">🌿 Take the Pledge</button>
                 <button class="btn-cta" onclick="downloadInfo()">📄 Download the Info Sheet</button>
-                <button class="btn-cta" onclick="startCampaign()">🎓 Start a School Campaign</button>
+            </div>
+            <div class="social-links" aria-label="Follow us on social media">
+                <a class="social-btn social-insta" href="https://www.instagram.com/greenbagssg?igsh=ZW9sYWVjMXZ2bmN3&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" role="img" aria-label="Instagram logo">
+                        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="17" cy="7" r="1.2" fill="currentColor"></circle>
+                    </svg>
+                    <span>Check us on Instagram</span>
+                </a>
+                <a class="social-btn social-whatsapp" href="https://whatsapp.com/channel/0029Vb6iCJa7dmeYZ5de7A1n" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" role="img" aria-label="WhatsApp logo">
+                        <path d="M12 3C7.03 3 3 6.92 3 11.76c0 1.54.45 3.02 1.31 4.32L3 21l5.08-1.65c1.22.46 2.5.7 3.92.7 4.97 0 9-3.92 9-8.76S16.97 3 12 3zm0 15.45c-1.2 0-2.35-.24-3.4-.7l-.24-.1-3.02.98.98-2.92-.16-.25A6.96 6.96 0 015.1 11.7c0-3.86 3.07-6.99 6.9-6.99s6.9 3.13 6.9 6.99c0 3.85-3.07 6.99-6.9 6.99zm3.4-5.2c-.19-.1-1.12-.55-1.29-.61-.17-.06-.29-.1-.4.1-.12.2-.46.61-.57.73-.11.12-.21.14-.4.05-.19-.1-.81-.29-1.54-.93-.57-.51-.95-1.15-1.07-1.34-.11-.2-.01-.29.08-.39.09-.09.19-.25.28-.37.09-.12.12-.2.18-.33.06-.13.03-.24-.01-.34-.05-.1-.4-.97-.55-1.33-.14-.34-.29-.3-.4-.3h-.34c-.12 0-.31.05-.47.24-.16.2-.62.6-.62 1.46 0 .86.64 1.69.73 1.81.09.12 1.26 1.96 3.07 2.75 1.81.79 1.81.53 2.14.5.33-.03 1.04-.42 1.18-.83.14-.41.14-.76.1-.83-.04-.07-.17-.11-.36-.21z"></path>
+                    </svg>
+                    <span>Chat with us on WhatsApp</span>
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Feedback Button -->
+    <a href="mailto:karthikayyappan.ramasamy@giis.edu.sg?subject=Feedback%20on%20GreenBagsSG%20Website&body=Hi%20there,%0A%0AI%20visited%20your%20GreenBagsSG%20website%20and%20wanted%20to%20share%20some%20feedback:%0A%0A" 
+       class="feedback-button" 
+       aria-label="Send feedback via email">
+        <span class="feedback-icon">💬</span>
+        <span class="feedback-text">Feedback</span>
+    </a>
+
+    <!-- Join Us Button -->
+    <a href="https://whatsapp.com/channel/0029Vb6iCJa7dmeYZ5de7A1n" 
+       class="join-us-button" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Join our WhatsApp channel">
+        <span class="join-us-icon">🌱</span>
+        <span class="join-us-text">Join Us</span>
+    </a>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 GIIS Student Initiative - Reducing Plastic Bag Usage in Singapore</p>
+        <p>GIIS Group - GreenBagsSG</p>
     </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-toggle" class="chatbot-toggle">
+            <span class="chatbot-icon">🤖</span>
+            <span class="chatbot-text">Ask GreenBot</span>
+        </div>
+        
+        <div id="chatbot-window" class="chatbot-window hidden">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <span class="bot-avatar">🌱</span>
+                    <span>GreenBot - Your Eco Assistant</span>
+                </div>
+                <button id="chatbot-close" class="chatbot-close">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">🌱</div>
+                    <div class="message-content">
+                        Hi! I'm GreenBot! 🌿 I can help you learn about plastic waste reduction in Singapore. Ask me anything!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Ask about plastic bags, recycling, tips..." maxlength="200">
+                <button id="chatbot-send" class="chatbot-send-btn">Send</button>
+            </div>
+            
+            <div class="chatbot-quick-questions">
+                <button class="quick-question" data-question="How can I reduce plastic bag usage?">💡 Reduce Usage</button>
+                <button class="quick-question" data-question="What are the statistics?">📊 Statistics</button>
+                <button class="quick-question" data-question="How to recycle properly?">♻️ Recycling</button>
+                <button class="quick-question feedback-btn" data-question="I want to provide feedback to help you learn better">📝 Provide Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Experience Overlay -->
+    <div id="experience-overlay" class="experience-overlay" aria-modal="true" role="dialog">
+        <div class="experience-overlay-inner">
+            <h2 class="experience-title">Welcome to GreenBagsSG</h2>
+            <p class="experience-text">
+                Tap below to start the full experience with gentle background sound and interactive elements.
+            </p>
+            <button id="experience-start-btn" class="experience-start-btn">
+                Start Experience
+            </button>
+        </div>
+    </div>
+
+    <!-- Narrator Widget -->
+    <div id="narrator-container" class="narrator-container">
+        <button id="narrator-toggle" class="narrator-toggle" aria-label="Toggle website narrator">
+            <span class="narrator-icon">🗣️</span>
+        </button>
+        <div id="narrator-panel" class="narrator-panel hidden" aria-live="polite">
+            <div class="narrator-header">
+                <span class="narrator-title">Website Narrator</span>
+            </div>
+            <div class="narrator-controls">
+                <button id="narrator-read-page" class="narrator-btn">Read this page</button>
+                <button id="narrator-stop" class="narrator-btn narrator-stop">Stop</button>
+            </div>
+            <p class="narrator-note">Tip: You can scroll while listening. Uses your browser's voice.</p>
+        </div>
+    </div>
+
+    <!-- Ambient Sound Toggle (YouTube background audio) -->
+    <div id="ambient-audio-container">
+        <!-- iframe is created dynamically via script.js when user enables sound -->
+    </div>
+    <button id="ambient-audio-toggle" class="ambient-audio-toggle" aria-label="Toggle ambient background sound">
+        <span class="ambient-audio-icon">🔈</span>
+    </button>
 
     <script src="script.js"></script>
 </body>
